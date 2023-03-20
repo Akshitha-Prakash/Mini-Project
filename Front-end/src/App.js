@@ -23,6 +23,11 @@ import UserHome from './Screens/HomeScreens/UserHome';
 //Import React Router
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from './Components/Menu';
+import AddRest from './Components/AddRest';
+import ManageRest from './Components/manageRest';
+import ListRest from './Components/listRest';
+import ListUsers from './Components/listUsers';
+
 
 
 
@@ -43,6 +48,12 @@ function App() {
           <Route path='/RestaurantHome' element={<RestaurantHome></RestaurantHome>}></Route>
           <Route path='/AdminHome' element={<AdminHome></AdminHome>}></Route>
           <Route path='/Admin' element={<AdminLogin></AdminLogin>}></Route>
+          <Route path='/add' element={<AddRest></AddRest>}></Route>
+          <Route path='/manage' element={<ManageRest></ManageRest>}></Route>
+          <Route path='/list' element={<listRest></listRest>}></Route>
+          <Route path='/users' element={<listUsers></listUsers>}></Route>
+          
+
         </Routes>
       </Router>
     </div>

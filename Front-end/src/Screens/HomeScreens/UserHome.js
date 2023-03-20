@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import {useLocation, Link, useNavigate} from 'react-router-dom';
 import LogoutImg from '../../Icons/Logout.svg';
+import Arasan from '../../Images/Arasan.jpg';
+import Darling from '../../Images/Darling.jpg'
 
 
 function UserHome() {
@@ -35,14 +37,14 @@ function UserHome() {
                 {/* Restaurant 1 Button */}
                 <Link to="/UserRestaurantHome">
                 <div class="relative rounded-lg hover:shadow-2xl hover:transform hover:scale-105 transition duration-300 ease-in-out ">
-                    <img src={require("/Users/gnaneshwaran/Documents/GitProjects/Mini-Project/my-app/Front-end/src/Images/Arasan.jpg")} class="rounded-lg w-[400px] h-[300px]"></img>
+                    <img src={require(Arasan)} class="rounded-lg w-[400px] h-[300px]"></img>
                     <h1 class="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">Arasan</h1>
                 </div>
                 </Link>
 
                 {/* Restaurant 2 Button */}
                 <div class="relative ">
-                    <img src={require("/Users/gnaneshwaran/Documents/GitProjects/Mini-Project/my-app/Front-end/src/Images/Darling.jpg")} class="rounded-lg w-[400px] h-[300px]"></img>
+                    <img src={require(Darling)} class="rounded-lg w-[400px] h-[300px]"></img>
                     <h1 class="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">Darling</h1>
                 </div>
                 
