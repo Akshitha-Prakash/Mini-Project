@@ -8,7 +8,7 @@ import LogoutImg from '../../Icons/Logout.svg';
 
 import { Routes, Route } from 'react-router-dom';
 import Menu from '../../Components/Menu';
-import Orders from '../../Components/Orders';
+import Cart from '../../Components/Cart';
 
 
 function UserRestaurantHome() {
@@ -25,13 +25,13 @@ function UserRestaurantHome() {
   }
 
   const handleLogout = (e) => {
-    navigate('/');
+    navigate('/Role');
   }
   
   const content = () => {
     switch(option) {
       case 1: return <Menu></Menu>
-      case 2: return <Orders></Orders>
+      case 2: return <Cart></Cart>
       // default: return <div>Error</div>
     }
   }
@@ -81,14 +81,14 @@ function UserRestaurantHome() {
       </button>
       
 
-      {/* Order Button */}
+      {/* Cart Button */}
       
       <button
         class="p-2.5 mt-3 flex w-full items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-mypurple text-black hover:text-white"
         onClick={handleOrder}
       >
         <img class="aspect-square " src={OrderImg} />
-        <span class="text-[15px] ml-4 font-bold">Order</span>
+        <span class="text-[15px] ml-4 font-bold">Cart</span>
       </button>
 
       {/* Divider */}

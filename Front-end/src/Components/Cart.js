@@ -1,13 +1,13 @@
 import React from 'react'
 
-function Orders() {
+function Cart() {
   return (
     <div>
       <div class=" flex justify-center text-5xl font-bold m-5">
-        Orders
+        Cart
       </div>
   </div>
   )
 }
 
-export default Orders
+export default Cart

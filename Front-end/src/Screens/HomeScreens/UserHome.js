@@ -12,7 +12,7 @@ function UserHome() {
     const navigate = useNavigate();
 
     const handleLogout = (e) => {
-        navigate('/');
+        navigate('/Role');
       }
   return (
     <div >

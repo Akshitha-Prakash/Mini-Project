@@ -31,7 +31,13 @@ function UserLogin() {
     }
     axios(loginConfiguration)
     .then((result) => {
-      navigate('/UserHome',{state:result.data});
+      if (result.data.role == 'user') {
+        navigate('/UserHome',{state:result.data});
+      }
+      else {
+        alert("You don't have permission to access this part of the site!");
+      }
+      
       
   })
     .catch((error) => {alert("Invalid Credentials!");})
@@ -64,15 +70,7 @@ function UserLogin() {
             <label class="ml-3 text-sm font-bold tracking-wide text-gray-700"> Password </label>
             <input class="w-full content-center rounded-lg border border-gray-300 px-4 py-2 text-base focus:border-indigo-500 focus:outline-none" type="password" placeholder="Enter Password" value={password}  onChange={(e) => setPassword(e.target.value)}/>
           </div>
-          <div class="flex items-center justify-between">
-            <div class="flex items-center">
-              <input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 rounded border-gray-300 bg-blue-500 focus:ring-blue-400" />
-              <label for="remember_me" class="ml-2 block text-sm text-gray-900"> Remember me </label>
-            </div>
-            <div class="text-sm">
-              <a href="#" class="text-mypurple hover:text-black"> Forgot your password? </a>
-            </div>
-          </div>
+          
           <div>
           
             <button type="submit" class="bg-mypurple flex w-full cursor-pointer justify-center rounded-lg bg-gradient-to-r p-4 font-semibold tracking-wide text-gray-100 shadow-lg transition duration-500 ease-in hover:bg-black hover:bg-gradient-to-l">Sign in</button>
